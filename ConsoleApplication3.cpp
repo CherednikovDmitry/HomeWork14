@@ -1,17 +1,28 @@
 #include <iostream>
-#include <string>
 
-int main()
+void FindOddNumbers(bool x, int n)
 {
-	std::string str = "SkillBox Homework";
+	for (int i = 0; i <= n; i++)
+	{
+		if (i % 2 == x)
+			std::cout << i << " ";
+	}
+}
+void foo(bool x, int n)
+{
+	FindOddNumbers(x, n);
+}
 
-	std::cout << "SkillBox Homework" "\n";
-		
-	std::cout << "String Length = " << str.length();
+int main(int argc, char* argv[])
+{
+	bool c; int x;
+	setlocale(0, "Russian");
+	std::cout << "¬ведите число: ";
+	std::cin >> x;
+	std::cout << "¬ведите - 1 дл€ отображени€ нечЄтных чисел, либо - 0 дл€ отображдени€ чЄтных";
+	std::cin >> c;
 
-	std::cout << "The first letter = " << str.front();
-
-	std::cout << "The last letter = " << str.back();
+	foo(c, x);
 
 	return 0;
 }
